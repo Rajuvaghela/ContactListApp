@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ContactListApp</string>
+    <string name="firstName_title">FirstName</string>
+    <string name="nameTitle">Name:</string>
+    <string name="emailTitle">Email:</string>
+    <string name="lastName_title">LastName</string>
+    <string name="email_title">Email</string>
+
+
+</resources>
