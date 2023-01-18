@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.contactlistapp.databinding.ItemContactListBinding
 import com.example.contactlistapp.model.ContactData
-import com.example.contactlistapp.ui.ShowDetailContactActivity
 import dagger.hilt.android.internal.managers.FragmentComponentManager
 
 
@@ -30,16 +29,6 @@ class ContactListAdapter(
     override fun onBindViewHolder(holder: ContactListViewHolder, position: Int) {
         holder.bind(contactItems[position])
 
-        holder.itemView.setOnClickListener {
-            val contactDetails = contactItems[holder.adapterPosition]
-            val intent = Intent(context, ShowDetailContactActivity::class.java)
-            intent.putExtra("firstName", contactDetails.first_name)
-            intent.putExtra("lastName", contactDetails.last_name)
-            intent.putExtra("email", contactDetails.email)
-            intent.putExtra("avatar", contactDetails.avatar)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            context.startActivity(intent)
-        }
     }
 
     override fun getItemCount(): Int {
